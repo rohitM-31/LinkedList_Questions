@@ -1,0 +1,63 @@
+Beginner Level
+Create and Print a Linked List
+
+Insert a node at the beginning, end, and a specific position
+
+Delete a node from beginning, end, and specific position
+
+Search for a value in a linked list
+
+Find the length of the linked list
+
+Reverse a linked list (iterative & recursive)
+
+⚙️ Intermediate Level
+Find the middle of a linked list
+→ Use slow and fast pointers
+
+Detect a loop in a linked list
+→ Floyd's Cycle Detection Algorithm
+
+Remove loop from linked list
+→ After detecting a loop
+
+Check if a linked list is a palindrome
+→ Reverse second half and compare
+
+Merge two sorted linked lists
+→ Merge operation like in merge sort
+
+Find the nth node from the end
+→ Two pointer method
+
+Delete the middle node
+
+Remove duplicates from a sorted/unsorted list
+
+🚀 Advanced Level
+Reverse a linked list in groups of size K
+
+Intersection point of two linked lists
+
+Add two numbers represented by linked lists
+
+Flatten a multi-level linked list
+
+Copy a linked list with random pointers
+
+Sort a linked list
+→ Merge sort on linked list
+
+Rotate linked list by k places
+
+Detect and remove cycle in linked list
+
+Segregate even and odd nodes in a list
+
+🔁 Variants
+Circular Linked List problems
+
+Doubly Linked List operations
+
+Convert between Linked List and Array
+
