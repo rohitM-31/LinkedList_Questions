@@ -1,46 +1,18 @@
-
-
-import java.util.*;
-class Node 
-{
+class Node{
     int data;
     Node next;
-    Node(int d)
+    Node (int data)
     {
-        data=d;
-        next=null;
+        this.data=data;
+        this.next=null;
     }
 }
-public class ReverseList {
-    public static void PrintList(Node head)
+class Main {
+    Node head;
+    Node reverse(Node head)
     {
-        Node curr=head;
-        while(curr!=null)
-        {
-            System.out.print(curr.data+"-> ");
-            curr=curr.next;
-        }
-        System.out.print("null");
-    
-
-    }
-    public static int MiddleNode(Node head)
-    {
-        Node fast=head;
-        
-        Node slow=head;
-        while(fast!=null && fast.next!=null)
-        {
-            fast=fast.next.next;
-            slow=slow.next;
-        }
-        return slow.data;
-    }
-
-    public static Node ReverseL1(Node head)
-    {
-        Node curr=head;
         Node prev=null;
+        Node curr=head;
         Node next=null;
         while(curr!=null)
         {
@@ -49,45 +21,32 @@ public class ReverseList {
             prev=curr;
             curr=next;
         }
-        return prev;
+        head=prev;
+        return head;
+    }
+    void printList(Node node)
+    {
+        while(node!=null)
+        {
+            System.out.println(node.data+"->");
+            node=node.next;
+        }
+        System.out.println();
+        
     }
     public static void main(String[] args) {
-        Scanner sc=new Scanner(System.in);
-        System.out.println("Enter number of Nodes");
-        Node head=null;
-        Node tail=null;
-        int n=sc.nextInt();
-        System.out.println("Enter elements");
-        for(int i=0;i<n;i++)
-        {
-            int data=sc.nextInt();
-            
-             Node newNode=new Node(data);
-            if(head==null)
-            {
-                head=newNode;
-                tail=newNode;
+        Main list=new Main();
+        list.head=new Node(1);
+         list.head.next=new Node(2);
+         list.head.next.next=new Node(3);
+          list.head.next.next.next=new Node(4);
+          list.printList(list.head);
+          list.head = list.reverse(list.head);
 
-            }
-            else{
-            
-            tail.next=newNode;
-            tail=newNode;
-            }
-
-
-
-        }
-        sc.close();
-        System.out.println("print the orginal list");
-        PrintList(head);
-        System.out.print("Reverse the list");
-        head=ReverseL1(head);
-        PrintList(head);
-        System.out.print("Middle Elemenet of the list");
-        int mid=MiddleNode(head);
-        System.out.println(mid);
-
+        System.out.println("Reversed List:");
+        list.printList(list.head);
+          
+          
         
     }
 }
